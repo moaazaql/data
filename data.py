@@ -12,9 +12,14 @@ st.set_page_config(
     page_title= 'Currency rate dashboard',
     layout= 'wide'
 )
-options = st.selectbox("Chose the Currency",('U.S Dollar','Euro','U.K Pound Sterling','Egyptian Pound'))
+st.title("Currency rate / live data dashboard")
+options = st.sidebar.selectbox("Chose the Currency",('U.S Dollar','Euro','U.K Pound Sterling','Egyptian Pound'))
 
 placeholder = st.empty()
 
-st.title("Currency rate / live data dashboard")
+st.header(options)
+
+if options == 'U.S Dollar':
+    usd_df.head()
+    
 
