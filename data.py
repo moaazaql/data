@@ -21,5 +21,13 @@ st.header(options)
 
 if options == 'U.S Dollar':
     usd_df.head()
-    
+
+if options == 'Euro':
+    euro_df.head()
+
+if options == 'Egyptian Pound':
+    uk_df.head()
+
+if options == 'U.S Dollar':
+    egy_df.head()
 
