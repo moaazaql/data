@@ -20,14 +20,14 @@ placeholder = st.empty()
 st.header(options)
 
 if options == 'U.S Dollar':
-    usd_df.head()
+    st.write(usd_df.head())
 
 if options == 'Euro':
-    euro_df.head()
+    st.write(euro_df.head())
 
 if options == 'Egyptian Pound':
-    uk_df.head()
+    st.write(uk_df.head())
 
 if options == 'U.S Dollar':
-    egy_df.head()
+    st.write(egy_df.head())
 
