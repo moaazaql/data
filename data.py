@@ -12,22 +12,43 @@ st.set_page_config(
     page_title= 'Currency rate dashboard',
     layout= 'wide'
 )
-st.title("Currency rate / live data dashboard")
+st.title(":bar_chart: Currency rate / live data dashboard")
+st.markdown("##")
+
 options = st.sidebar.selectbox("Chose the Currency",('U.S Dollar','Euro','U.K Pound Sterling','Egyptian Pound'))
 
 placeholder = st.empty()
 
 st.header(options)
-
 if options == 'U.S Dollar':
+    with placeholder.container():
+        # create three columns
+        kpi1, kpi2, kpi3 = st.columns(3)
+        kpi1.metric(label="Euro €", value=round(df.loc['rate']['eur']))
+        kpi2.metric(label="Egyptian Pound E£", value=round(df.loc['rate']['egp'] )
+        kpi3.metric(label="U.K. Pound Sterling  £", value=round(df.loc['rate']['gbp'])
+
+
+    st.markdown("""---""")
+    
     st.write(st.dataframe(usd_df.head()))
 
 if options == 'Euro':
+
+    st.markdown("""---""")
+    
     st.write(st.dataframe(euro_df.head()))
 
 if options == 'Egyptian Pound':
+    
+
+    st.markdown("""---""")
+    
     st.write(st.dataframe(uk_df.head()))
 
 if options == 'U.S Dollar':
+
+    st.markdown("""---""")
+    
     st.write(st.dataframe(egy_df.head()))
 
