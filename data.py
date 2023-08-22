@@ -24,9 +24,9 @@ if options == 'U.S Dollar':
     with placeholder.container():
         # create three columns
         kpi1, kpi2, kpi3 = st.columns(3)
-        kpi1.metric(label="Euro €", value=round(df.loc['rate']['eur']))
-        kpi2.metric(label="Egyptian Pound E£", value=round(df.loc['rate']['egp'] )
-        kpi3.metric(label="U.K. Pound Sterling  £", value=round(df.loc['rate']['gbp'])
+        kpi1.metric(label="Euro €", value=round(usd_df.loc['rate']['eur']))
+        kpi2.metric(label="Egyptian Pound E£", value=round(usd_df.loc['rate']['egp'] ))
+        kpi3.metric(label="U.K. Pound Sterling  £", value=round(usd_df.loc['rate']['gbp']))
 
 
     st.markdown("""---""")
